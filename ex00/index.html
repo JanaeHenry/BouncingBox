@@ -1,0 +1,52 @@
+<html style='background-color: black'>
+  <div id="my_bouncing_box" style= "background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; 
+  min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;" >Not loaded</div>
+  <script type="text/javascript">
+  
+  let element = document.getElementById("my_bouncing_box");
+  let velocities = {"vertical_speed": -1, "horizontal_speed": -1,} //object in javascript. Saves our speed/souls???????/
+
+// let element.setAttribute("name", "helloButton");
+//   element.innerHTML = "Not loaded";
+  document.getElementById("my_bouncing_box").innerHTML = "henry_j";
+  let x = setInterval(function mybox () {
+    // console.log(my_bouncing_box.style.min-width)
+    // box_width = parseInt(my_bouncing_box.style.width);
+    // box_height = parseInt(my_bouncing_box.style.height);
+
+    let top = parseInt(my_bouncing_box.style.top);
+    if (top >= window.innerHeight || top == 0)
+    {
+        velocities.vertical_speed = velocities.vertical_speed * -1;
+    }
+
+    let left = parseInt(my_bouncing_box.style.left);
+    if (left >= window.innerWidth || left == 0)
+    {
+        velocities.horizontal_speed = velocities.horizontal_speed * -1;
+    }
+
+    top = top + velocities.vertical_speed;
+    left = left + velocities.horizontal_speed;
+
+    my_bouncing_box.style.top = top + "px";
+    my_bouncing_box.style.left = left + "px";
+
+    console.log("my_bouncing_box.style.top = ", my_bouncing_box.style.top)
+    console.log("my_bouncing_box.style.left = ", my_bouncing_box.style.left)
+  }, 10)
+
+//   if (pos === 150) {
+//         clearInterval(x)
+//     }
+//     //console.log(window.screen.height)
+  </script>
+</html>
+
+
+
+
+ 
+
+  
+
